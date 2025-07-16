@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "build:cloudflare": "npm ci --production=false && vite build",
     "build:ci": "rm -rf node_modules package-lock.json && npm install && vite build",
     "build:dev": "vite build --mode development",
     "build:preview": "vite build --mode preview",
