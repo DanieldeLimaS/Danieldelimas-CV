@@ -1,12 +1,13 @@
 
-import { Phone, Mail, Globe, MapPin, Wifi, Server } from "lucide-react";
+import { Phone, Mail, Globe, MapPin, Wifi, Server, Github } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
 const ContactSection = () => {
   const contactItems = [
-    { icon: Phone, text: "(35) 99816-1377", color: "text-cyan-400", bgColor: "bg-cyan-500/10" },
-    { icon: Mail, text: "devdanieldelima@gmail.com", color: "text-green-400", bgColor: "bg-green-500/10" },
-    { icon: Globe, text: "devlima.com.br", color: "text-purple-400", bgColor: "bg-purple-500/10" },
+    { icon: Phone, text: "(35) 99816-1377", color: "text-cyan-400", bgColor: "bg-cyan-500/10", href: "tel:+5535998161377" },
+    { icon: Mail, text: "devdanieldelima@gmail.com", color: "text-green-400", bgColor: "bg-green-500/10", href: "mailto:devdanieldelima@gmail.com" },
+    { icon: Globe, text: "devlima.com.br", color: "text-purple-400", bgColor: "bg-purple-500/10", href: "https://devlima.com.br" },
+    { icon: Github, text: "DanieldeLimaS", color: "text-gray-300", bgColor: "bg-gray-500/10", href: "https://github.com/DanieldeLimaS" },
     { icon: MapPin, text: "Paraguaçu, MG", color: "text-orange-400", bgColor: "bg-orange-500/10" },
   ];
 
@@ -31,17 +32,30 @@ const ContactSection = () => {
         </div>
         
         <div className="space-y-3">
-          {contactItems.map((item, index) => (
-            <div key={index} className={`flex items-center gap-3 p-3 rounded-lg hover:${item.bgColor} transition-all duration-300 border border-transparent hover:border-gray-600 group cursor-pointer`}>
-              <div className={`p-2 ${item.bgColor} rounded-lg group-hover:scale-110 transition-transform duration-200`}>
-                <item.icon className={`w-4 h-4 ${item.color}`} />
-              </div>
-              <span className="text-gray-300 font-mono text-sm group-hover:text-white transition-colors">{item.text}</span>
-              <div className="ml-auto opacity-0 group-hover:opacity-100 transition-opacity">
-                <div className="w-1 h-1 bg-current rounded-full animate-ping"></div>
-              </div>
-            </div>
-          ))}
+          {contactItems.map((item, index) => {
+            const Component = item.href ? 'a' : 'div';
+            const linkProps = item.href ? {
+              href: item.href,
+              target: item.href.startsWith('http') ? '_blank' : undefined,
+              rel: item.href.startsWith('http') ? 'noopener noreferrer' : undefined
+            } : {};
+
+            return (
+              <Component 
+                key={index} 
+                className={`flex items-center gap-3 p-3 rounded-lg hover:${item.bgColor} transition-all duration-300 border border-transparent hover:border-gray-600 group cursor-pointer`}
+                {...linkProps}
+              >
+                <div className={`p-2 ${item.bgColor} rounded-lg group-hover:scale-110 transition-transform duration-200`}>
+                  <item.icon className={`w-4 h-4 ${item.color}`} />
+                </div>
+                <span className="text-gray-300 font-mono text-sm group-hover:text-white transition-colors">{item.text}</span>
+                <div className="ml-auto opacity-0 group-hover:opacity-100 transition-opacity">
+                  <div className="w-1 h-1 bg-current rounded-full animate-ping"></div>
+                </div>
+              </Component>
+            );
+          })}
         </div>
       </CardContent>
     </Card>
