@@ -4,7 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 
 const ContactSection = () => {
   const contactItems = [
-    { icon: Phone, text: "(35) 99832-8764", color: "text-cyan-400", bgColor: "bg-cyan-500/10" },
+    { icon: Phone, text: "(35) 99816-1377", color: "text-cyan-400", bgColor: "bg-cyan-500/10" },
     { icon: Mail, text: "devdanieldelima@gmail.com", color: "text-green-400", bgColor: "bg-green-500/10" },
     { icon: Globe, text: "devlima.com.br", color: "text-purple-400", bgColor: "bg-purple-500/10" },
     { icon: MapPin, text: "Paraguaçu, MG", color: "text-orange-400", bgColor: "bg-orange-500/10" },
