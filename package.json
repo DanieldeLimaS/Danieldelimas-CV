@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "npm ci --omit=dev --omit=optional && vite build",
+    "build:ci": "rm -rf node_modules package-lock.json && npm install && vite build",
     "build:dev": "vite build --mode development",
     "build:preview": "vite build --mode preview",
     "lint": "eslint .",
@@ -80,5 +81,9 @@
     "typescript": "^5.5.3",
     "typescript-eslint": "^8.0.1",
     "vite": "^5.4.1"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
   }
 }

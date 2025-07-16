@@ -21,11 +21,13 @@ export default defineConfig({
     outDir: "dist",
     assetsDir: "assets",
     sourcemap: false, // Desabilita sourcemaps para produção
-    minify: "esbuild", // Usa esbuild em vez de terser
+    minify: "esbuild", // Usa esbuild em vez de terser para evitar problemas com Rollup
     rollupOptions: {
+      // Força o uso de dependências bundled para evitar problemas com binários nativos
+      external: [],
       output: {
         // Garante que os assets tenham nomes consistentes
-        assetFileNames: (assetInfo) => {
+        assetFileNames: (assetInfo: any) => {
           const info = assetInfo.name?.split('.') || [];
           const ext = info[info.length - 1];
           if (/png|jpe?g|svg|gif|tiff|bmp|ico/i.test(ext || '')) {
@@ -38,12 +40,15 @@ export default defineConfig({
         },
         chunkFileNames: 'assets/js/[name]-[hash].js',
         entryFileNames: 'assets/js/[name]-[hash].js',
+        // Configurações para evitar problemas com módulos externos
+        manualChunks: undefined,
       },
     },
     // Configurações para melhor compatibilidade
     target: "es2015", // Suporte a navegadores mais antigos
     cssCodeSplit: true,
     reportCompressedSize: false, // Melhora performance do build
+    chunkSizeWarningLimit: 1000, // Aumenta limite de tamanho de chunk
   },
   // Configurações para desenvolvimento
   optimizeDeps: {
