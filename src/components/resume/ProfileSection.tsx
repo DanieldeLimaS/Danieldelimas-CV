@@ -50,7 +50,7 @@ const ProfileSection = () => {
             <div className="relative">
               <Avatar className="w-36 h-36 border-4 border-gradient-to-br from-cyan-600 via-purple-600 to-pink-600 shadow-xl shadow-cyan-500/50">
                 <AvatarImage 
-                  src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
+                  src="https://avatars.githubusercontent.com/u/71935746?v=4" 
                   alt="Daniel de Lima dos Santos"
                   className="object-cover"
                 />
