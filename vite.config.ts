@@ -4,51 +4,17 @@ import path from "path";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  server: {
-    host: "::",
-    port: 8080,
-  },
-  plugins: [
-    react(),
-  ],
+  plugins: [react()],
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
     },
   },
   build: {
-    // Configurações otimizadas para Cloudflare Pages
     outDir: "dist",
-    assetsDir: "assets",
-    sourcemap: false, // Desabilita sourcemaps para produção
-    minify: "esbuild", // Usa esbuild em vez de terser para evitar problemas com Rollup
-    rollupOptions: {
-      // Força o uso de dependências bundled para evitar problemas com binários nativos
-      external: [],
-      output: {
-        // Garante que os assets tenham nomes consistentes
-        assetFileNames: (assetInfo: any) => {
-          const info = assetInfo.name?.split('.') || [];
-          const ext = info[info.length - 1];
-          if (/png|jpe?g|svg|gif|tiff|bmp|ico/i.test(ext || '')) {
-            return `assets/images/[name]-[hash][extname]`;
-          }
-          if (/css/i.test(ext || '')) {
-            return `assets/css/[name]-[hash][extname]`;
-          }
-          return `assets/[name]-[hash][extname]`;
-        },
-        chunkFileNames: 'assets/js/[name]-[hash].js',
-        entryFileNames: 'assets/js/[name]-[hash].js',
-        // Configurações para evitar problemas com módulos externos
-        manualChunks: undefined,
-      },
-    },
-    // Configurações para melhor compatibilidade
-    target: "es2015", // Suporte a navegadores mais antigos
-    cssCodeSplit: true,
-    reportCompressedSize: false, // Melhora performance do build
-    chunkSizeWarningLimit: 1000, // Aumenta limite de tamanho de chunk
+    sourcemap: false,
+    minify: true,
+    target: "es2015",
   },
   // Configurações para desenvolvimento
   optimizeDeps: {
