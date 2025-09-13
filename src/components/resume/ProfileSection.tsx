@@ -8,7 +8,7 @@ import TypingAnimation from "@/components/animated/TypingAnimation";
 const ProfileSection = () => {
   const handleDownloadCV = () => {
     // URL do PDF no Google Drive (convertida para visualização direta)
-    const pdfUrl = "https://drive.google.com/file/d/1NFLOkj8ih4FlCE-_22anQ7maM9fw7Nnc/view?usp=sharing";
+    const pdfUrl = "https://drive.google.com/file/d/1VPrZcqy7Y7afOzfjMcHbIk7P0jXJ7hHn/view?usp=sharing";
     
     // Abre o PDF em uma nova aba
     window.open(pdfUrl, '_blank');
@@ -37,7 +37,7 @@ const ProfileSection = () => {
             
             <div className="flex items-center gap-3">
               <Code className="w-5 h-5 text-cyan-500" />
-              <p className="text-xl text-cyan-400 font-semibold font-mono">.NET Developer</p>
+              <p className="text-xl text-cyan-400 font-semibold font-mono">Engenheiro de Software</p>
               <div className="flex gap-1">
                 <div className="w-2 h-2 bg-green-500 rounded-full animate-ping"></div>
                 <div className="w-2 h-2 bg-green-500 rounded-full"></div>

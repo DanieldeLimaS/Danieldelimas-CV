@@ -7,9 +7,9 @@ const ExperienceSection = () => {
       company: "Grupo Hiper Saúde",
       role: "DESENVOLVEDOR DE SISTEMAS", 
       period: "Outubro 2023 – Atual",
-      description: "Engenheiro de Software com experiência em integração de dados utilizando .NET 6 e Java. Possuo sólidos conhecimentos em Google Cloud Platform (GCP), incluindo Cloud Build, e domino ferramentas de CI/CD como GitHub Actions. Atuo em todas as fases do desenvolvimento de software, desde a concepção de novos produtos até a implementação de soluções tecnológicas robustas. Atualmente estou atuando no time de frontend com Angular desenvolvendo o Manager (core da empresa) onde concentra cadastros de clientes e suas documentações e gestão atual.",
+      description: "Engenheiro de Software com experiência em backend e full stack, atuando com .NET, Java (Spring Boot, Quarkus) e Angular. Forte vivência em Google Cloud Platform, utilizando recursos como Cloud Build, Cloud Run, Pub/Sub e Cloud Scheduler. Experiência em CI/CD, integrações, jobs e desenvolvimento de soluções escaláveis e robustas, com foco em qualidade, observabilidade e boas práticas de arquitetura.",
       status: "active",
-      tech: [".NET 6", "Java", "GCP", "GitHub Actions", "Cloud Build", "Angular", "Frontend", "CI/CD"],
+      tech: [".NET", "Java", "Quarkus", "GCP", "GitHub Actions", "Cloud Build","Cloud Run", "Pub/Sub", "Cloud Scheduler", "Angular", "Frontend", "CI/CD"],
       sortOrder: 1
     },
     {
