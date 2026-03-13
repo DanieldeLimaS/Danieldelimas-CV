@@ -5,74 +5,74 @@ const ExperienceSection = () => {
   const experiences = [
     {
       company: "Grupo Hiper Saúde",
-      role: "DESENVOLVEDOR DE SISTEMAS", 
+      role: "ENGENHEIRO DE SOFTWARE", 
       period: "Outubro 2023 – Atual",
-      description: "Engenheiro de Software com experiência em backend e full stack, atuando com .NET, Java (Spring Boot, Quarkus) e Angular. Forte vivência em Google Cloud Platform, utilizando recursos como Cloud Build, Cloud Run, Pub/Sub e Cloud Scheduler. Experiência em CI/CD, integrações, jobs e desenvolvimento de soluções escaláveis e robustas, com foco em qualidade, observabilidade e boas práticas de arquitetura.",
+      description: "Desenvolvimento de serviços independentes no Cloud Run com comunicação assíncrona via PubSub, integrador de dados de vendas/estoque de farmácias, job de importação de contratos com extração via IA e pipelines CI/CD com CloudBuild.",
       status: "active",
-      tech: [".NET", "Java", "Quarkus", "GCP", "GitHub Actions", "Cloud Build","Cloud Run", "Pub/Sub", "Cloud Scheduler", "Angular", "Frontend", "CI/CD"],
+      tech: ["Java", "Spring Boot", "Quarkus", "JPA", "Hibernate", ".NET 8", "EF Core", "Dapper", "Angular", "Go", "Python", "PostgreSQL", "BigQuery", "PubSub", "Docker", "Cloudflare", "GCP", "Cloud Run", "Cloud SQL", "IAM", "Secret Manager", "Cloud Scheduler", "Artifact Registry"],
       sortOrder: 1
     },
     {
       company: "ABC Fitness",
-      role: "DEV BACKEND .NET",
+      role: "DESENVOLVEDOR .NET",
       period: "Julho 2023 – Setembro 2023 (3 meses)",
-      description: "Desenvolvedor .NET com foco em projetos de Empréstimo Consignado no Banco BMG. Expertise em .NET Core e versões mais recentes, Web API, bancos de dados SQL Server e NoSQL (MongoDB), além de arquitetura DDD. Familiaridade com ferramentas de CI/CD (Azure DevOps), cloud (AWS) e metodologias ágeis (Kanban).",
+      description: "Atuação em time de sustentação na plataforma EVO, resolvendo bugs e problemas críticos em vaga temporária.",
       status: "completed",
-      tech: [".NET Core", "Web API", "SQL Server", "MongoDB", "DDD", "Azure DevOps", "AWS", "Kanban"],
+      tech: [".NET", "ASP.NET", "Angular", "SQL Server", "DDD", "Hexagonal", "CI/CD", "Azure DevOps", "Git"],
       sortOrder: 2
     },
     {
       company: "ACT Digital",
       role: "DEV BACKEND .NET",
-      period: "2022 – 2023 (1 ano e 4 meses)",
-      description: "Desenvolvedor .NET com foco em projetos de Empréstimo Consignado no Banco BMG. Integrações com o dataprev para fluxo de empréstimo em .NET Core e versões mais recentes, Web API, bancos de dados SQL Server e NoSQL (MongoDB), além de arquitetura DDD. Familiaridade com ferramentas de CI/CD (Azure DevOps), cloud (AWS) e metodologias ágeis (Kanban).",
+      period: "Março 2022 – Julho 2023 (1 ano e 5 meses)",
+      description: "Alocado no Banco BMG na equipe de Empréstimo FGTS. Migração de serviços para mensageria com RabbitMQ, reestruturação do produto de empréstimos e desenvolvimento de APIs com integração DataPrev.",
       status: "completed",
-      tech: [".NET Core", "Web API", "SQL Server", "MongoDB", "DDD", "Azure DevOps", "AWS", "Kanban"],
+      tech: [".NET Core 5/6/7", "Web API", "SQL Server", "MongoDB", "Entity Framework", "Dapper", "DDD", "RabbitMQ", "AWS S3", "AWS Rekognition", "SonarQube", "Azure DevOps", "GitFlow", "Kanban"],
       sortOrder: 3
     },
     {
       company: "Função Sistemas",
       role: "DEV FULL-STACK .NET",
-      period: "2022 (4 meses)",
-      description: "Atuando como Dev Full Stack .NET, resolvi desafios complexos em projetos legados Web Forms, garantindo a estabilidade e evolução da plataforma. Entreguei soluções eficientes e escaláveis, utilizando tecnologias como ASP.NET MVC, Web API e SQL Server.",
+      period: "Dezembro 2021 – Março 2022 (4 meses)",
+      description: "Desenvolvimento e manutenção de soluções para agências bancárias, incluindo Web Forms e relatórios na plataforma do banco C6.",
       status: "completed",
-      tech: ["Web Forms", "ASP.NET MVC", "Web API", "SQL Server", "Full Stack"],
+      tech: [".NET", "ASP.NET MVC", "Web API", "SQL Server", "Scrum", "Kanban"],
       sortOrder: 4
     },
     {
       company: "SUM Software",
       role: "DESENVOLVEDOR .NET",
-      period: "2021 (6 meses)",
-      description: "Desenvolvimento de sistemas de automação comercial e sistemas fiscais, com destaque para o desenvolvimento de um módulo do sistema para geração do SPED fiscal e manutenção da parte financeira. Tecnologias utilizadas: .NET Framework (Windows Forms), AutoMapper, Fluent Validation, Metro Framework, WCF, ORM (Entity Framework e Core, Dapper), SQL Server, Crystal Report, metodologia ágil Scrum, Git e GitHub.",
+      period: "Julho 2021 – Dezembro 2021 (6 meses)",
+      description: "Desenvolvimento do módulo de SPED Fiscal e manutenção do módulo financeiro em sistema de automação comercial.",
       status: "completed",
-      tech: [".NET Framework", "Windows Forms", "AutoMapper", "Fluent Validation", "Metro Framework", "WCF", "Entity Framework", "Dapper", "SQL Server", "Crystal Reports", "SPED Fiscal", "Scrum", "Git", "GitHub"],
+      tech: [".NET Framework", "Windows Forms", "Entity Framework", "Dapper", "SQL Server", "Crystal Report", "AutoMapper", "Fluent Validation", "Scrum", "Git"],
       sortOrder: 5
     },
     {
       company: "Grupo Hiper Saúde",
       role: "DEV FULL-STACK .NET PLENO",
-      period: "2020 – 2021 (1 ano e 1 mês)",
-      description: "Atuação em projetos internos com integrações com Power BI e novas plataformas de controle de gestão interna de equipamentos. Tecnologias utilizadas: .NET Framework 4.8, .NET Core 5, Web API, ORM (Entity Framework e Dapper), MySQL, SQL Server, Power BI, HTML, CSS, JavaScript, jQuery, Bootstrap 5.",
+      period: "Julho 2020 – Julho 2021 (1 ano e 1 mês)",
+      description: "Desenvolvimento de projetos internos com integrações Power BI e plataformas de controle de gestão interna.",
       status: "completed",
-      tech: [".NET Framework 4.8", ".NET Core 5", "Web API", "Entity Framework", "Dapper", "MySQL", "SQL Server", "Power BI", "HTML", "CSS", "JavaScript", "jQuery", "Bootstrap 5"],
+      tech: [".NET Framework 4.8", ".NET Core 5", "Web API", "Entity Framework", "Dapper", "MySQL", "SQL Server", "Power BI", "HTML", "CSS", "JavaScript", "jQuery", "Bootstrap"],
       sortOrder: 6
     },
     {
       company: "Grupo Hiper Saúde",
-      role: "AUXILIAR T.I. / DEV .NET JÚNIOR",
-      period: "2018 – 2020 (2 anos)",
-      description: "Suporte técnico e Atendimento ao cliente, Instalação de software e manutenção de computadores, Treinamento do sistema de gestão interna para novos colaboradores. Desenvolvedor .NET Framework com experiência em Windows Forms, Entity Framework e Dapper. Responsável pela criação e manutenção do sistema de gestão interna, incluindo modelagem de banco de dados SQL Server, construção de queries e desenvolvimento de procedures.",
+      role: "AUXILIAR DE T.I / DEV .NET",
+      period: "Agosto 2018 – Julho 2020 (2 anos)",
+      description: "Criação e manutenção do sistema de gestão interna, modelagem de banco de dados, procedures e queries. Suporte técnico e treinamento de novos colaboradores.",
       status: "completed",
-      tech: [".NET Framework", "C#", "SQL Server", "Windows Forms", "Entity Framework", "Dapper", "Crystal Reports", "Suporte Técnico", "Treinamento"],
+      tech: [".NET Framework", "Windows Forms", "Entity Framework", "Dapper", "SQL Server"],
       sortOrder: 7
     },
     {
       company: "First Soluções",
       role: "DESENVOLVEDOR .NET JÚNIOR",
-      period: "2015 – 2017 (2 anos e 1 mês)",
-      description: "Desenvolvimento de sistemas de automação comercial, manutenção e novas implementações com windows forms, atuação em banco de dados sql server, além de prestar suporte técnico de software, desenvolvimento .Net Framework (Windows Forms), ajustes de Sintegras, montagem e manutenção de computadores, treinamento ao cliente do sistema de gestão",
+      period: "Maio 2015 – Maio 2017 (2 anos e 1 mês)",
+      description: "Desenvolvimento e manutenção do sistema Commerce de automação comercial, módulo financeiro e banco de dados. Suporte técnico e treinamento ao cliente.",
       status: "completed",
-      tech: ["C#","SQL Server","Windows Forms","Crystal Reports", "Suporte Técnico", "Treinamento"],
+      tech: [".NET Framework", "Windows Forms", "SQL Server"],
       sortOrder: 8
     }
   ];

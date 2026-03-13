@@ -8,7 +8,7 @@ import TypingAnimation from "@/components/animated/TypingAnimation";
 const ProfileSection = () => {
   const handleDownloadCV = () => {
     // URL do PDF no Google Drive (convertida para visualização direta)
-    const pdfUrl = "https://drive.google.com/file/d/1VPrZcqy7Y7afOzfjMcHbIk7P0jXJ7hHn/view?usp=sharing";
+    const pdfUrl = "https://drive.google.com/file/d/1V63cl2p4qJBbStZlUn-V6Jjexj5CeF_r/view?usp=drive_link";
     
     // Abre o PDF em uma nova aba
     window.open(pdfUrl, '_blank');
@@ -78,8 +78,8 @@ const ProfileSection = () => {
               </div>
               <div className="text-gray-300 leading-relaxed text-lg space-y-2">
                 <div className="text-purple-400">/**</div>
-                <div className="text-purple-400">* Meu maior conhecimento está em .NET, especialmente no desenvolvimento backend. No entanto, não me limito a uma única tecnologia e vejo cada novo aprendizado como uma oportunidade de crescimento.</div>
-                <div className="text-purple-400">* Utilizo principalmente Google Cloud Platform, .NET, Java, Angular, Python, BQ, PostgreSQL, SQL Server e outras linguagens para criar soluções inovadoras, mas estou sempre aberto a explorar novas ferramentas e tecnologias.</div>
+                <div className="text-purple-400">* Engenheiro de Software com mais de 9 anos de experiência em desenvolvimento de sistemas, arquitetura de soluções e backend. Atuação sólida com .NET (todas as versões até .NET 8) e Java (Spring Boot, Quarkus), com vivência em Angular, Go e Python.</div>
+                <div className="text-purple-400">* Experiência em arquitetura de microsserviços, APIs REST, mensageria (PubSub, RabbitMQ), CI/CD e bancos relacionais e NoSQL. Forte atuação em Google Cloud Platform, AWS e Azure, com foco em soluções escaláveis, observabilidade e boas práticas de engenharia de software.</div>
                 <div className="text-purple-400">*/</div>
               </div>
             </div>
